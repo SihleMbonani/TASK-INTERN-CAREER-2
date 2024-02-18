@@ -10,8 +10,8 @@ export default function Register() {
   const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError(false);
+    e.preventDefault()
+    setError(false)
     try {
       const res = await axios.post("/auth/register", {
         username,
@@ -20,7 +20,7 @@ export default function Register() {
       });
       res.data && window.location.replace("/login");
     } catch (err) {
-      setError(true);
+      setError(true)
     }
   };
   return (
@@ -37,7 +37,7 @@ export default function Register() {
         <label>Password: </label>
         <input className="registerInput" type="password" placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} /><br/>
         
-        <button className="registerButton">Register</button><br/>
+        <button className="registerButton" type="submit">Register</button><br/>
             Already have an account?
         <hr width="80%" style={{alignself: "center"}} />
         <button className="loginButton">

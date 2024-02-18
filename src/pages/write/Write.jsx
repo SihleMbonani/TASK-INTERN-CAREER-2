@@ -21,7 +21,7 @@ export default function Write() {
         const filename = Date.now() + file.name;
         data.append("name", filename);
         data.append("file", file);
-        newPost.photo = filename;
+        newPost.photos = filename;
         try {
           await axios.post("/upload", data);
         } catch (err) {}
@@ -50,7 +50,7 @@ export default function Write() {
                 <textarea className="writeInput writeText" type="text" placeholder="Write your blog content here!...." onChange={e=>setDesc(e.target.value)} ></textarea>
             </div>
 
-            <button className="writeSubmit">Publish</button>
+            <button className="writeSubmit" type="submit">Publish</button>
         </form>
     </div>
   )

@@ -33,7 +33,7 @@ export default function Login() {
         <label>Password: </label>
         <input className="loginInput" type="password" placeholder="Enter Password" ref={passwordRef} /><br/>
         
-        <button className="loginButton">Login</button><br/>
+        <button className="loginButton" type="submit" disabled={isFetching} >Login</button><br/>
             Don't have an account?
         <hr width="80%" style={{alignself: "center"}} />
         <button className="registerButton">

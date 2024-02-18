@@ -74,7 +74,7 @@ export default function Settings() {
           <label>Password: </label>
           <input type="password" onChange={(e) => setPassword(e.target.value)} />
 
-          <button className="settingsSubmit">Update</button>
+          <button className="settingsSubmit" type="submit">Update</button>
 
           {success && (
             <span
